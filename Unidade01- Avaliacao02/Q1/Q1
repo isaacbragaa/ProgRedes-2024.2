@@ -1,0 +1,6 @@
+ESTÁ CRIANDO OS ARQUIVOS MESMO ELES NÃO ESTANDO NA PASTA FILES, CRIAR COMANDO DE SAÍDA OU FECHAMENTO DO SERVIDOR, VERIFICAR COM ARQUIVOS MAIORES
+
+Antes de enviar os dados do arquivo, o servidor usa os.path.getsize() para calcular o tamanho do arquivo em bytes. O tamanho do arquivo é então enviado ao cliente como uma string em utf-8. Então o servidor envia o conteúdo do arquivo em partes de 4096 bytes. O cliente primeiro recebe o tamanho do arquivo e o converte em um número inteiro.  Em seguida, ele começa a receber blocos de bytes e soma o número de bytes até atingir o tamanho necessário. 
+Quando o número de bytes recebidos for igual ao tamanho do arquivo, o cliente para de esperar.
+
+No tratamento de exceções 
